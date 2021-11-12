@@ -13,7 +13,7 @@ install:
 
 
 build_script:
-- cmd: pyoxidizer build --release
+- cmd: C:\Python38-x64\Scripts\pyoxidizer.exe build --release
 
 after_build:
  - 7z a uncompyle6-x86_64.7z C:\uncompyle6-builds\build\x86_64-pc-windows-msvc\release\install\uncompyle6.exe
