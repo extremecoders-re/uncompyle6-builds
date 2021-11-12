@@ -12,9 +12,6 @@ install:
     C:\Python38-x64\python.exe -m pip install pyoxidizer
 
 
-    pip install --user pyoxidizer
-
-
 build_script:
 - cmd: pyoxidizer build --release
 
