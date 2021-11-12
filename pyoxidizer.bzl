@@ -231,8 +231,8 @@ def make_exe(dist):
     # `add_python_resources()` adds these objects to the binary, with a load
     # location as defined by the packaging policy's resource location
     # attributes.
-    exe.add_python_resources(exe.pip_install(["uncompyle6==3.7.4"]))
-    exe.add_python_resources(exe.pip_install(["git+https://github.com/extremecoders-re/python-xdis"]))
+    exe.add_python_resources(exe.pip_install(["uncompyle6==3.8.0"]))
+    # exe.add_python_resources(exe.pip_install(["git+https://github.com/extremecoders-re/python-xdis"]))
 
 
     # Invoke `pip install` using a requirements file and add the collected resources

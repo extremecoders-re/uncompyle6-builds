@@ -9,20 +9,14 @@ clone_depth: 1
 
 install:
 - cmd: >-
-    C:\Miniconda38-x64\condabin\conda.bat create -n pyoxidizer --yes --quiet
+    C:\Python38-x64\python.exe -m pip install pyoxidizer
 
 
-    C:\Miniconda38-x64\condabin\conda.bat activate pyoxidizer
-
-
-    C:\Miniconda38-x64\condabin\conda.bat install -c conda-forge rust --yes --quiet
-
-    
-    cargo install pyoxidizer
+    pip install --user pyoxidizer
 
 
 build_script:
-- cmd: C:\Users\appveyor\.cargo\bin\pyoxidizer.exe build --release
+- cmd: pyoxidizer build --release
 
 after_build:
  - 7z a uncompyle6-x86_64.7z C:\uncompyle6-builds\build\x86_64-pc-windows-msvc\release\install\uncompyle6.exe
