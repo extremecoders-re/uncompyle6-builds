@@ -12,13 +12,7 @@ No Python or Uncompyle6 installation is required. Simply download the binary fro
 uncompyle6.exe -o . file_to_decompile.pyc 
 ```
 
-Uncompyle6 can decompile pyc files ranging from Python versions 2.4 to 3.8. For more information, visit the Uncompyle6 repo.
-
-
-## Patch notes
-
-The compiled binary uses a custom fork of the [`xdis`](https://github.com/extremecoders-re/python-xdis) package. This was necessary as the upstream package didn't support Python 3.8.8 at this time. PyOxidizer requires Python version 3.8.8 at minimum.
-
+Uncompyle6 can decompile pyc files ranging from Python versions 2.4 to 3.10. For more information, visit the Uncompyle6 repo.
 
 ## LICENSE
 
