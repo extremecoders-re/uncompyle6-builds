@@ -6,7 +6,7 @@
 # this distribution into our produced executable and extract the Python
 # standard library from it.
 def make_dist():
-    return default_python_distribution(flavor = "standalone_static", python_version="3.8")
+    return default_python_distribution(flavor = "standalone_static", python_version="3.10")
 
 # Configuration files consist of functions which define build "targets."
 # This function creates a Python executable and installs it in a destination
@@ -40,12 +40,12 @@ def make_exe(dist):
     # to run a Python interpreter. Various functionality from the Python
     # standard library won't work with this setting! But it can be used to
     # reduce the size of generated executables by omitting unused extensions.
-    # policy.extension_module_filter = "minimal"
+    policy.extension_module_filter = "minimal"
 
     # Package Python extensions in the distribution not having additional
     # library dependencies. This will exclude working support for SSL,
     # compression formats, and other functionality.
-    # policy.extension_module_filter = "no-libraries"
+    policy.extension_module_filter = "no-libraries"
 
     # Package Python extensions in the distribution not having a dependency on
     # GPL licensed software.
@@ -214,7 +214,7 @@ def make_exe(dist):
     # exe.windows_runtime_dlls_mode = "always"
 
     # Make the executable a console application on Windows.
-    # exe.windows_subsystem = "console"
+    exe.windows_subsystem = "console"
 
     # Make the executable a non-console application on Windows.
     # exe.windows_subsystem = "windows"
@@ -231,7 +231,7 @@ def make_exe(dist):
     # `add_python_resources()` adds these objects to the binary, with a load
     # location as defined by the packaging policy's resource location
     # attributes.
-    exe.add_python_resources(exe.pip_install(["uncompyle6==3.8.0"]))
+    exe.add_python_resources(exe.pip_install(["uncompyle6==3.9.0"]))
     # exe.add_python_resources(exe.pip_install(["git+https://github.com/extremecoders-re/python-xdis"]))
 
 
@@ -288,5 +288,5 @@ resolve_targets()
 # Everything below this is typically managed by PyOxidizer and doesn't need
 # to be updated by people.
 
-PYOXIDIZER_VERSION = "0.11.0"
+PYOXIDIZER_VERSION = "0.23.0"
 PYOXIDIZER_COMMIT = "UNKNOWN"
