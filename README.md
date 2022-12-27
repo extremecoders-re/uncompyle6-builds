@@ -2,7 +2,7 @@
 
 This repository contains precompiled binaries of the [Uncompyle6](https://github.com/rocky/python-uncompyle6/) decompiler for Windows. The binaries have been generated using [PyOxidizer](https://github.com/indygreg/PyOxidizer).
 
-No Python or Uncompyle6 installation is required. Simply download the binary from the [CI server](https://ci.appveyor.com/project/extremecoders-re/uncompyle6-builds/build/artifacts) which you can use right away.
+No Python or Uncompyle6 installation is required. Simply download the binary from the [releases](https://github.com/extremecoders-re/uncompyle6-builds/releases) which you can use right away.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/xx85wfss36klic62?svg=true)](https://ci.appveyor.com/project/extremecoders-re/uncompyle6-builds)
 
